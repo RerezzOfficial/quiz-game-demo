@@ -1,0 +1,257 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+body {
+	background: #000000;
+	font-size: 3em;
+}
+
+* {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+	   -moz-user-select: none; /* Old versions of Firefox */
+	    -ms-user-select: none; /* Internet Explorer/Edge */
+	        user-select: none; /* Non-prefixed version, currently
+	                              supported by Chrome, Edge, Opera and Firefox */
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.answers {
+}
+
+li {
+	cursor: pointer;
+}
+
+.main-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1920px;
+	margin-left: -960px;
+	height: 1200px;
+	margin-top: -600px;
+	transform: translate(-50%, -50%) scale(1.0);
+}
+
+.main-container-inner {
+	width: 1920px;
+	height: 1200px;
+	position: relative;
+}
+
+.main-container .title {
+	font-size: 2em;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin-top: -400px;
+	text-align: center;
+	color: #00BCD4;
+}
+
+.main-container .reload {
+	border: 0;
+	background: transparent;
+	color: #404040;
+	font-size: 0.8em;
+	position: absolute;
+	top: 0;
+	right: 5%;
+	width: 100px;
+	line-height: 60px;
+	height: 60px;
+	display: block;
+}
+
+.main-container .close {
+	border: 0;
+	background: transparent;
+	color: #404040;
+	font-size: 0.8em;
+	position: absolute;
+	top: 0;
+	right: 10%;
+	width: 100px;
+	line-height: 60px;
+	height: 60px;
+	display: block;
+}
+
+.main-container .timer {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 200px;
+	margin-left: -50px;
+	text-align: center;
+}
+
+.main-container .start {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: transparent;
+	border: 0;
+	font-size: 0.8em;
+}
+
+.main-container .next-question {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: transparent;
+	border: 0;
+	font-size: 0.8em;
+}
+.main-container .start:active,
+.main-container .next-question:active {
+	background: transparent;
+}
+
+.main-container .game-status-container {
+	font-size: 1em;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin-top: -300px;
+	text-align: center;
+}
+
+.main-container .game-status-container > span {
+	font-size: 1.5em;
+}
+.main-container .game-status-container > span > b {
+	color: #2196F3;
+	font-family: Consolas;
+}
+
+.main-container .game-status-container span .fa-circle-check {
+	color: #8BC34A;
+	font-size: 2em;
+	margin-top: 30px;
+}
+
+.main-container .help-buttons {
+	position: absolute;
+	top: 0;
+	left: 25%;
+}
+
+.main-container .points-container {
+	position: absolute;
+	top: 0;
+	left: 2%;
+}
+
+.main-container .question-container {
+	position: absolute;
+	display: table-cell;
+	vertical-align: middle;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	height: 600px;
+	line-height: 600px;
+	text-align: center;
+}
+
+.main-container .question-container > span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1em;
+	text-align: justify;
+}
+
+.main-container .answer-container {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	height: 400px;
+	width: 1600px;
+	margin-left: -800px;
+}
+
+.main-container .answer-container .answers {
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.main-container .answer-container .answers li {
+	position: absolute;
+	display: table-cell;
+	vertical-align: middle;
+	height: 180px;
+	width: 780px;
+	text-align: center;
+	line-height: 180px;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	font-size: 0.8em;
+	text-shadow: 0 0 3px black;
+	border-radius: 34px;
+}
+
+.main-container .answer-container .answers li.locked {
+	background: #FFC107;
+}
+
+.main-container .answer-container .answers li.correct {
+	background: #4CAF50;
+}
+
+.main-container .answer-container .answers li.wrong {
+	background: #F44336;
+}
+
+.main-container .answer-container .answers li[id="0"] {
+	top: 0;
+	left: 0;
+}
+
+.main-container .answer-container .answers li[id="1"] {
+	top: 0;
+	right: 0;
+}
+
+.main-container .answer-container .answers li[id="2"] {
+	bottom: 0;
+	left: 0;
+}
+
+.main-container .answer-container .answers li[id="3"] {
+	bottom: 0;
+	right: 0;
+}
+
+.main-container .answer-container .answers li > span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1em;
+	width: 660px;
+	color: #ffffff;
+}
+
+.main-container .question-container pre {
+	background: rgba(255,255,255,0.1);
+	overflow: unset;
+	padding: 20px;
+	border: 0;
+	border-radius: 0;
+	box-shadow: unset;
+}

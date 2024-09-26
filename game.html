@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ποιος θέλει να γίνει hacker;</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-container-inner">
+			<div class="upper-container">
+				<h1 class="title"><i class="fa-solid fa-terminal"></i> Ποιος θέλει να γίνει hacker;</h1>
+				<button type="button" class="btn btn-secondary start">κάνε κλικ για να ξεκινήσεις ...</button>
+				<button type="button" class="close hidden"><i class="fa-solid fa-xmark"></i></button>
+				<button type="button" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+				<div class="game-status-container hidden"></div>
+			</div>
+			<div class="next-question-container hidden">
+				<button type="button" class="btn btn-secondary next-question">κάνε κλικ για να συνεχίσεις ...</button>
+			</div>
+			<div class="game-container hidden">
+				<div class="timer">40</div>
+				<div class="help-buttons">
+					<button type="button" class="btn btn-lg btn-secondary second-guess-button">2η Ευκαιρία</button>
+					<button type="button" class="btn btn-lg btn-secondary fifty-fifty">50:50</button>
+				</div>
+				<div class="question-container"></div>
+				<div class="answer-container">
+					<ul class="answers">
+					</ul>
+				</div>
+			</div>
+			<div class="points-container hidden">0</div>
+		</div>
+	</div>
+	<audio id="lets-play" src="sounds/lets_play.mp3"></audio>
+	<audio id="easy" src="sounds/easy.mp3"></audio>
+	<audio id="wrong-answer" src="sounds/wrong_answer.mp3"></audio>
+	<audio id="correct-answer" src="sounds/correct_answer.mp3"></audio>
+
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/showdown.min.js"></script>
+	<script>
+		window.Prism = window.Prism || {};
+		window.Prism.manual = true;
+	</script>
+	<script type="text/javascript" src="js/prism.js"></script>
+	<script type="text/javascript" src="js/questions.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
